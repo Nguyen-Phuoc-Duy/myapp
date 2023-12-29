@@ -36,7 +36,13 @@ const app = express();
 //const app = express()
 
 const cookieParser = require("cookie-parser");
-const cookieValidator = require("./cookieValidator");
+async function cookieValidator(cookies) {
+  try {
+    await externallyValidateCookie(cookies.testCookie);
+  } catch {
+    throw new Error("Invalid cookies");
+  }
+}
 
 async function validateCookies(req, res, next) {
   await cookieValidator(req.cookies);
