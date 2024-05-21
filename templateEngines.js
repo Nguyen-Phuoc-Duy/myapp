@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 // app.set("views", "./views"); // specify the views directory
 // app.set("view engine", "ntl"); // register the template engine
 ////////////////////////////////////
-const PORT = 3000;
+const PORT = 3333;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

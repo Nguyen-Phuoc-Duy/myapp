@@ -128,10 +128,10 @@ app.set("views", path.join(__dirname, "views"));
 // });
 ////////////////////////////////////////////// 9
 app.use((err, req, res, next) => {
-  console.error(err.stack)
-  res.status(500).send('Something broke!')
-})
-const PORT = 3000;
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
+});
+const PORT = 3333;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
